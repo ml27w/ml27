@@ -1,4 +1,4 @@
-/* ===== Halloween Town Wedding RSVP ===== */
+﻿/* ===== Halloween Town Wedding RSVP ===== */
 
 // ---------------------------------------------------------------
 // SETTINGS - the only thing you need to touch in this file
@@ -10,7 +10,7 @@ const CONFIG = {
   subjectPrefix: "Wedding RSVP",
   // Used for the "add to calendar" button on the thank-you screen
   coupleNames: "Michael & Lucy",
-  ceremonyStart: "2027-03-05T14:00:00", // keep in step with data-date on the countdown
+  ceremonyStart: "2027-03-05T15:00:00", // keep in step with data-date on the countdown
   ceremonyMinutes: 60,
   ceremonyLocation: "Pontefract Registry Office",
   calendarNotes: "Reception to follow at Glasshoughton Social Club. Spooky attire is warmly encouraged!",
@@ -341,7 +341,7 @@ const CONFIG = {
     const start = new Date(Date.UTC(y, mo - 1, da, h, mi));
     const end = new Date(start.getTime() + CONFIG.ceremonyMinutes * 60000);
     const esc = (s) => s.replace(/([,;\\])/g, "\\$1").replace(/\n/g, "\\n");
-    // Floating local time (no Z): shows as 2pm in whatever calendar it's opened in
+    // Floating local time (no Z): shows as 3pm in whatever calendar it's opened in
     const ics = [
       "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Wedding RSVP//EN", "BEGIN:VEVENT",
       `UID:wedding-${fmt(start)}@rsvp`,
