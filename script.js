@@ -1,4 +1,4 @@
-﻿/* ===== Halloween Town Wedding RSVP ===== */
+﻿/* ===== Wedding RSVP ===== */
 
 // ---------------------------------------------------------------
 // SETTINGS - the only thing you need to touch in this file
@@ -13,7 +13,7 @@ const CONFIG = {
   ceremonyStart: "2027-03-05T15:00:00", // keep in step with data-date on the countdown
   ceremonyMinutes: 60,
   ceremonyLocation: "Pontefract Registry Office",
-  calendarNotes: "Reception to follow at Glasshoughton Social Club. Spooky attire is warmly encouraged!",
+  calendarNotes: "Reception to follow at Glasshoughton Sports and Social.",
 };
 // ---------------------------------------------------------------
 
@@ -42,7 +42,7 @@ const CONFIG = {
     }
   }
 
-  // ---- falling snow + rising embers (Halloween meets Christmas) ---------
+  // ---- falling snow + rising embers (snow and glowing embers) ---------
   const canvas = $("#snow");
   if (canvas && !reduceMotion) {
     const ctx = canvas.getContext("2d");
@@ -245,7 +245,7 @@ const CONFIG = {
     }
     data["Message to the couple"] = val("message") || "-";
     data._autoresponse = attending
-      ? `Hi ${name}, thank you for your RSVP! We've got you down for our wedding and we can't wait to see you. Spooky attire is warmly encouraged. Love, ${CONFIG.coupleNames}.`
+      ? `Hi ${name}, thank you for your RSVP! We've got you down for our wedding and we can't wait to see you. Love, ${CONFIG.coupleNames}.`
       : `Hi ${name}, thank you for letting us know. We'll miss you, but you'll be there in spirit! Love, ${CONFIG.coupleNames}.`;
     return data;
   }
@@ -301,7 +301,7 @@ const CONFIG = {
   function showThanks(payload) {
     const coming = isAttending();
     $("#thanksEmoji").textContent = coming ? "🦇" : "👻";
-    $("#thanksTitle").textContent = coming ? "Wickedly wonderful!" : "We'll miss you!";
+    $("#thanksTitle").textContent = coming ? "Thank You!" : "We'll miss you!";
     $("#thanksText").textContent = coming
       ? "Your RSVP has flown off to the happy couple on the wings of a bat. A confirmation is on its way to your inbox too."
       : "Thank you for letting us know. You'll be there in spirit! Your reply has flown off to the happy couple.";
